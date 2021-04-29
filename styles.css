@@ -1,42 +1,104 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f9fafc;
-    padding: 0;
+    /* padding: 0; */
     margin: 0px;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    /* background-color: #333; */
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+  }
+
+#navElements{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-right: 80px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 10px;
 }
 
 /* header {
     width: 100%;
     background-color: #551A8B;
     color: rgba(255,255,255,0.8);
-    padding: 20px;
   } */
 
+/* #navElements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ */
+.cartIcon {
+    margin-right: 30px;
+    color: blue;
+}
+
   #logo {
-    color: white;
+    color: black;
     margin-left: 20px;
+    font-weight: bolder;
+    font-size: 40px;
   }
 
-  ul {
-    list-style: none;
-    display: inline-block;
-    flex-direction: row;
-    font-size: 14px;
-    padding-left: 0pt;
-  }
-  
-  li {
-    margin: 10px 0;
-  }
+#pageContent {
+    margin: 20px;
+}
+
+#productName {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+h2 {
+    margin-top: -18px;
+    margin-bottom: -10px;
+}
+
+h3 {
+    color: rgb(104, 104, 104);
+    font-weight: lighter;
+    font-kerning: normal;
+}
+
+p {
+    color: rgb(104, 104, 104);
+}
 
 #shopItems {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 4px;
 }
 
-a {
+.image {
+    margin-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* a {
     color: #495035;
  }
  
@@ -47,76 +109,89 @@ a {
   
   a:hover {
     color: #aa5344;
-  }
+  } */
 
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
 
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
   .topnav #myLinks {
-    display: none;
-  }
- 
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   
+  /* Style navigation menu links */
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    /* align-content: right; */
+    font-size: 17px;
+    /* display: flex;
+    flex-direction: column; */
+    /* display: block; */
+  }
+  
+  /* Style the hamburger menu */
   .topnav a.icon {
-    background: black;
+    /* background: black; */
     display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
   
+  /* Add a grey background color on mouse-over */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
   
+  /* Style the active link (or home/logo) */
   .active {
     background-color: #04AA6D;
     color: white;
   }
 
-
 @media only screen and (min-width: 768px) {
+
     /* header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     } */
-    
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      margin-right: 30px;
+
+    #pageContent {
+        margin: 40px;
     }
-  
-    li {
-      justify-content: space-between;
-      padding-right: 18px;
-    }
+
+    /* h1 {
+        font-size: 40px;
+        font-weight: lighter;
+        position: relative;
+    } */
 
     #shopItems {
         display: flex;
         flex-direction: row;
-        align-items: center;
         flex-wrap: wrap;
-        margin: 50px 100px;
-        align-items: flex-start;
+        justify-content: center;
+        /* align-items: center;
+        justify-content: space-between; */
+        /* margin: 20px; */
     }
+
+.image {
+    margin: 20px;
+}
+
+    img {
+        width: 44vw;
+        height: auto;
+      }
   
-    .logo {
+    /* .logo {
       font-size: 14px;
-    }
+    } */
   }
