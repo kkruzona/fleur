@@ -1,8 +1,7 @@
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
+let menuBtn = document.getElementById('menuIcon');
+menuBtn.addEventListener('click',()=>{
+    let link = document.getElementById('shopLink');
+    link.classList.toggle('hide')
+})
+
+  
