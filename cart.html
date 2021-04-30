@@ -33,11 +33,40 @@
             </nav>
         </header>
 
-        <section id="pageContent">
-        <div id="cartResults">
+    <section id="pageContent">
         
+    <div class="screen">
+        <div id="screenLeft">
+            <h1>Cart</h1>
+            <div id="cartResults">
+                <div id="cartListing">
+                    <a href=""><img src="Cactus-Plant.jpg" class="cartImage"></a>
+                    <div id="cartOverview">
+                        <div id="cartDetails">
+                            <h3>category</h3>
+                            <h2>product name</h2>
+                            <p>description</p>
+                        </div>
+                            <h2 id="price">$10</h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        </section>
+
+        <div id="screenRight">
+            <div class="container">
+                <h2>My Form</h2>
+                <form>
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname">
+                </form>
+                <button type="button" class="block" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>        
+    </section>
         
         <script src="script.js" async defer></script>
     </body>
