@@ -101,6 +101,11 @@ button {
   padding: 20px 20px;
   margin-top: 20px;
   margin-bottom: 80px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #187e68;
 }
 
 #shopItems {
@@ -141,10 +146,10 @@ a {
     color: black;
  }
  
-  a:link {
+  /* a:link {
     color: #22947c;
     text-decoration: none;
-  }
+  } */
   
   a:hover {
     color: #22947c;
@@ -182,33 +187,11 @@ a {
   height: auto;
 }
 
-button {
-  margin-bottom: 50px;
+#add-to-cart {
+  margin-bottom: 40px;
 }
 
 /* cart settings start here */
-.cartImage {
-  width: 200px;
-  height: 200px;
-  margin-right: 24px;
-}
-
-#cartListing {
-  margin: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-}
-
-#cartOverview {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#cartDetails {
-  margin-right: 300px;
-}
 
 .screen {
   display: flex;
@@ -216,38 +199,66 @@ button {
   height: 100vh;
 }
 
-.screenLeft {
-  flex: 33;
-  background: red;
+#screenLeft {
+  flex: 50;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
-.screenRight {
-  flex: 66;
-  background: black;
+#screenRight {
+  flex: 50;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
+}
+
+.cartImage {
+  width: 150px;
+  height: 150px;
+  /* margin-right: 24px; */
+}
+
+#cartListing {
+  /* margin: 20px; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: left; */
+}
+
+#cartOverview {
+  display: flex;
+  width: 50vw;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+#cartDetails {
+  margin-left: 20px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
-  margin: auto;
-  background-color: #ffffff;
-  padding: 40px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 140px;
+  /* align-items: center; */
+  background-color: #dcdcdc;
+  padding: 60px 40px 20px 40px;
   border-radius: 10px;
-  min-width: 220px;
-  height: 220px;
+  width: 50%;
+  height: 300px;
+  /* min-width: 220px;
+  height: 220px; */
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 26px;
+  padding-bottom: 20px;
+  /* margin-bottom: 26px; */
 }
 
 label {
@@ -261,6 +272,14 @@ input {
   border-color: #b3b3b3;
   border-width: 1px;
   padding: 5px;
+}
+
+#formTitle {
+  padding-bottom: 30px;
+}
+
+.submit {
+  
 }
 
 /* cart settings stop here */
@@ -277,7 +296,6 @@ input {
   display: none;
 } */
 
-}
 
 
 
