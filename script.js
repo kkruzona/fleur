@@ -40,7 +40,9 @@ let products = [
         price: 18.99,
     },
 ] 
-cartFromStorage=[];
+let cartFromStorage = localStorage.getItem('cart') ?
+              JSON.parse(localStorage.getItem('cart')): 
+              [];
 
 let myButtonContainer = document.getElementById('shopItems');
 
