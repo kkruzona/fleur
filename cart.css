@@ -1,0 +1,95 @@
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+.screen {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #screenLeft {
+    flex: 50;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  
+  #screenRight {
+    flex: 50;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .cartImage {
+    width: 150px;
+    height: 150px;
+    /* margin-right: 24px; */
+  }
+  
+  #cartListing {
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: left; */
+  }
+  
+  #cartOverview {
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #cartDetails {
+    margin-left: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 140px;
+    /* align-items: center; */
+    background-color: #dcdcdc;
+    padding: 60px 40px 20px 40px;
+    border-radius: 10px;
+    width: 50%;
+    height: 300px;
+    /* min-width: 220px;
+    height: 220px; */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    /* margin-bottom: 26px; */
+  }
+  
+  label {
+    padding-bottom: 4px;
+    font-size: 14px;
+  }
+  
+  input {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #b3b3b3;
+    border-width: 1px;
+    padding: 5px;
+  }
+  
+  #formTitle {
+    padding-bottom: 30px;
+  }
+  
+  .submit {
+    
+  }
+}

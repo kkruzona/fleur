@@ -1,0 +1,149 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    /* padding: 0; */
+    margin: 0px;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+  background-color:white;
+  opacity: 90%;
+  top: 0;
+  z-index: 2;
+  position: sticky;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  font-size: 20px;
+  z-index: 2;
+}
+
+#shopLink {
+  position: absolute;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#navIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.logo {
+  color: black;
+  margin-left: 20px;
+  font-weight: bolder;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+ul {
+    /* margin-top: -10px;
+    margin-left: -40px;
+    margin-bottom: -15px; */
+  }
+  
+  li {
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  #navLinks {
+    margin-right: 0;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  #cartIcon {
+    color: black;
+    padding-right: 30px;
+  }
+  
+  #menuIcon {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  #menuIcon:hover {
+    font-size: 26px;
+    cursor: pointer;
+    color: green;
+  }
+  
+  #pageContent {
+      margin: 20px;
+  }
+  
+  h1 {
+    font-size: 60px;
+    font-weight: lighter;
+  }
+  
+  h2 {
+      margin-top: -18px;
+      margin-bottom: -10px;
+  }
+  
+  h3 {
+      color: rgb(104, 104, 104);
+      font-weight: lighter;
+      font-kerning: normal;
+  }
+  
+  p {
+      color: rgb(104, 104, 104);
+  }
+  
+  button {
+    background-color: #22947c;
+    width:100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    color: #FFFFFF;
+    padding: 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #187e68;
+  }
+
+
+  a {
+    color: black;
+    text-decoration: none;
+ }
+ 
+  /* a:link {
+    color: #22947c;
+    text-decoration: none;
+  } */
+  
+  a:hover {
+    color: #22947c;
+    /* text-decoration: none; */
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    #pageContent {
+        margin: 40px;
+      }
+
+}

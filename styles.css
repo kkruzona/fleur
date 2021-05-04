@@ -1,112 +1,83 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f9fafc;
-    /* padding: 0; */
-    margin: 0px;
-}
-
-header {
+/* hero image start */
+.heroArea {
+  /* position: relative; */
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-  font-size: 20px;
-}
-
-#navIcons {
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-right: 30px;
 }
 
-.logo {
-  color: black;
-  margin-left: 20px;
-  font-weight: bolder;
-  font-size: 40px;
+#heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 0em; */
+  background-repeat: no-repeat;
+  /* background-size: */
+  filter: brightness(60%);
+  position: relative;
+  z-index: 1;
+  /* position: absolute; */
 }
 
-ul {
-  /* margin-top: -10px;
-  margin-left: -40px;
-  margin-bottom: -15px; */
+/* #heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .hero::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(Cactus-Plant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+} */
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  /* margin: 0.625rem; */
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+}
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+.hero-button {
+  color: white;
+  margin-top: 5rem;
+  width: 30vw;
+  cursor: pointer;
+}
+.hero-button:hover {
 }
 
-li {
-  list-style-type: none;
-  font-size: 18px;
-  font-weight: bolder;
-}
+/* hero image end */
 
-#navLinks {
-  margin-right: 0;
-}
 
-.hide {
-  display: none;
-}
-
-#cartIcon {
-  color: black;
-  padding-right: 30px;
-}
-
-#menuIcon {
-  font-size: 26px;
-}
-
-#pageContent {
-    margin: 20px;
-}
 
 /* #productName {
     display: flex;
     flex-direction: column-reverse;
 } */
 
-h1 {
-  font-size: 60px;
-  font-weight: lighter;
-}
 
-h2 {
-    margin-top: -18px;
-    margin-bottom: -10px;
-}
-
-h3 {
-    color: rgb(104, 104, 104);
-    font-weight: lighter;
-    font-kerning: normal;
-}
-
-p {
-    color: rgb(104, 104, 104);
-}
-
-button {
-  background-color: #22947c;
-  width:100%;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 400;
-  border: none;
-  color: #FFFFFF;
-  padding: 20px 20px;
-  margin-top: 20px;
-  margin-bottom: 80px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #187e68;
-}
 
 #shopItems {
   display: flex;
@@ -114,7 +85,7 @@ button:hover {
   align-items: center;
 }
 
-#productBlock {
+.productBlock {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -132,7 +103,7 @@ button:hover {
     height: auto;
   }
 
-  #productOverview {
+  .productOverview {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,37 +113,7 @@ button:hover {
   }
 
 
-a {
-    color: black;
- }
- 
-  /* a:link {
-    color: #22947c;
-    text-decoration: none;
-  } */
-  
-  a:hover {
-    color: #22947c;
-  }
-
-
 @media only screen and (min-width: 768px) {
-
-  /* nav {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  } */
-
-/* .hide {
-  display: none;
-} */
-
-
-
-#pageContent {
-  margin: 40px;
-}
 
 
 #shopItems {
@@ -191,126 +132,4 @@ a {
   margin-bottom: 40px;
 }
 
-/* cart settings start here */
-
-.screen {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
 }
-
-#screenLeft {
-  flex: 50;
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-#screenRight {
-  flex: 50;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-}
-
-.cartImage {
-  width: 150px;
-  height: 150px;
-  /* margin-right: 24px; */
-}
-
-#cartListing {
-  /* margin: 20px; */
-  display: flex;
-  flex-direction: row;
-  /* justify-content: left; */
-}
-
-#cartOverview {
-  display: flex;
-  width: 50vw;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#cartDetails {
-  margin-left: 20px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 140px;
-  /* align-items: center; */
-  background-color: #dcdcdc;
-  padding: 60px 40px 20px 40px;
-  border-radius: 10px;
-  width: 50%;
-  height: 300px;
-  /* min-width: 220px;
-  height: 220px; */
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  /* margin-bottom: 26px; */
-}
-
-label {
-  padding-bottom: 4px;
-  font-size: 14px;
-}
-
-input {
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #b3b3b3;
-  border-width: 1px;
-  padding: 5px;
-}
-
-#formTitle {
-  padding-bottom: 30px;
-}
-
-.submit {
-  
-}
-
-/* cart settings stop here */
-
-}
-
-
-
-/* button {
-  width: 50%;
-} */
-  
-/* button.hidden {
-  display: none;
-} */
-
-
-
-
-
-
-/* @media only screen and (min-width: 1020px) {
-  #shopItems {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  img {
-    width: 20vw;
-    height: auto;
-  }
-} */

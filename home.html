@@ -11,14 +11,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/450388363a.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <header>
             <a href="home.html"><h1 class="logo">fleur</h1></a>
             <nav>
@@ -34,41 +33,21 @@
             </nav>
         </header>
 
-    <section id="pageContent">
-        <h1>Cart</h1>
-    <div class="screen">
-        <div id="screenLeft">
-            <div id="cartResults">
-                <div id="cartListing">
-                    <a href=""><img src="Cactus-Plant.jpg" class="cartImage"></a>
-                    <div id="cartOverview">
-                        <div id="cartDetails">
-                            <h3>category</h3>
-                            <h2>product name</h2>
-                            <p>description</p>
-                        </div>
-                            <h2 id="price">$10</h2>
-                    </div>
-                </div>
+        <div class="heroArea">
+            <div id="heroImage"><img src="Cactus-Plant.jpg"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Our Plants</h1>
+                <h2 class="hero-subtitle">The best selections delivered to your door</h2>
+                 
+               <button type="button" class="hero-button" onclick="location.href='index.html'">
+                    Shop Now
+               </button>
+            
             </div>
+        
         </div>
-
-        <div id="screenRight">
-            <div class="container">
-                <form>
-                    <h2 id="formTitle">My Form</h2>
-                    <label for="fname">First name</label>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname">
-                </form>
-                <button type="button" id="submit">Submit</button>
-            </div>
-        </div>
-    </div>        
-    </section>
 
         <script src="common.js" async defer></script>
-        <script src="cart.js" async defer></script>
+        <script src="script.js" async defer></script>
     </body>
 </html>
