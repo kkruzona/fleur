@@ -37,7 +37,7 @@
     <section id="pageContent">
         <h1>Cart</h1>
     <div class="screen">
-        <div id="screenLeft">
+        <div class="screenLeft">
             <div id="cartResults">
                 <!-- <div id="cartListing">
                     <a href=""><img src="Cactus-Plant.jpg" class="cartImage"></a>
@@ -50,19 +50,26 @@
                     </div>
                 </div> -->
             </div>
-            <h2>Total: <span id="total"></span></h2>
+            <!-- <h2>Total: <span id="total"></span></h2> -->
         </div>
 
-        <div id="screenRight">
-            <div class="container">
-                <form>
-                    <h2 id="formTitle">My Form</h2>
-                    <label for="fname">First name</label>
-                    <input type="text" id="fname" name="fname">
-                    <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname">
-                </form>
-                <button type="button" id="submit">Submit</button>
+        <div class="screenRight">
+            <div class="cartCheckout">
+                <div class="cartTotals">
+                    <h3 class="subtotal" id="subtotal">Sub-total:</h3>
+                    <h3 class="taxes" id="taxes">Taxes:</h3>
+                    <h2 class="grandTotal" id="grandtotal">Grand-total:</h2>
+                </div>
+                <div class="container">
+                    <form>
+                        <h2 id="formTitle">My Form</h2>
+                        <label for="fname">First name</label>
+                        <input type="text" id="fname" name="fname">
+                        <label for="lname">Last name</label>
+                        <input type="text" id="lname" name="lname">
+                    </form>
+                    <button type="button" id="submit">Submit</button>
+                </div>
             </div>
         </div>
     </div>        

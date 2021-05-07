@@ -1,50 +1,40 @@
 /* hero image start */
+
 .heroArea {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#heroImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 0em; */
-  background-repeat: no-repeat;
-  /* background-size: */
-  filter: brightness(60%);
-  position: relative;
-  z-index: 1;
-  /* position: absolute; */
-}
-
-/* #heroImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .hero::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(Cactus-Plant.jpg);
-  background-repeat: no-repeat;
+video#bgvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  /* width: auto;
+  height: auto; */
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(placeholder.jpg) no-repeat;
   background-size: cover;
-  background-position: center center;
   filter: brightness(60%);
-} */
+  }
 
-.hero-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  z-index: 1;
-  /* margin: 0.625rem; */
-}
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30vh;
+    /* position: absolute; */
+    z-index: 1;
+    /* margin: 0.625rem; */
+  }
+
 .hero-title {
   font-size: 3rem;
   font-weight: 600;
@@ -64,8 +54,6 @@
   margin-top: 5rem;
   width: 30vw;
   cursor: pointer;
-}
-.hero-button:hover {
 }
 
 /* hero image end */
@@ -107,9 +95,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-top: -14px;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
   }
 
 

@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     /* padding: 0; */
-    margin: 0px;
+    margin: 0;
 }
 
 header {
@@ -29,6 +29,9 @@ nav {
   position: absolute;
   text-decoration: none;
   z-index: 2;
+  background-color: rgb(244, 244, 244);
+  padding: 11px;
+  margin-right: 20px;
 }
 
 #navIcons {
@@ -118,6 +121,7 @@ ul {
     margin-top: 20px;
     margin-bottom: 80px;
     cursor: pointer;
+    min-width: 400px;
   }
   
   button:hover {
