@@ -62,19 +62,92 @@
                     <h2 class="grandTotal" id="grandtotal">Grand-total:</h2>
                 </div>
                 <div class="container">
-                    <form>
-                        <h2 id="formTitle">My Form</h2>
-                        <label for="fname">First name</label>
-                        <input type="text" id="fname" name="fname">
-                        <label for="lname">Last name</label>
-                        <input type="text" id="lname" name="lname">
+                    <form id="userData">
+                        <h2 class="title">Checkout Form</h2>
+                            <div class="fieldRow">
+                                <div class="firstField">
+                                    <label for="fname">First Name:</label>
+                                    <input type="text" id="name" name="user_First_name">
+                                </div>
+                                <div class="secondField">
+                                    <label for="lname">Last Name:</label>
+                                    <input type="text" id="lastname" name="user_last_name">
+                                </div>
+                            </div>
+    
+                           <label for="mail">E-mail:</label>
+                           <input type="email" id="mail" name="user_email">
+    
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="user_address">
+    
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="user_city">
+                            <div class="fieldRow">
+                                <div class="firstField">
+                                    <label for="state">State:</label>
+                                    <input type="text" id="state" name="user_state">
+                                </div>
+                                <div class="secondField">
+                                    <label for="zip">Zip:</label>
+                                    <input type="text" id="zip" name="user_zip">
+                                </div>
+                            </div>
+                            
+    
+                           <!-- <label for="msg">Message:</label>
+                           <textarea id="msg" name="user_message"></textarea> -->
+    
+                        <!--Radio button default selected with appropriate form parts showing, 
+                            then event listener that listens for the change in radio button, 
+                            then changes what shows up in the form with the different button
+                            selection and form pieces for cash or credit card -->
+    
+                        <!--<form name="myForm">-->
+                            <div class="radios">
+                            <label for="cardbutton">Credit Card:</label>
+                            <input type="radio" name="myRadios"  value="credit" checked="checked"/>
+                            <label for="cardbutton2">Cash:</label>
+                            <input type="radio" name="myRadios"  value="cash" />
+                        </div>
+                        <!--</form>-->
+    
+                        <!--Form elements for credit card-->
+                        <div class="card-form no-show">
+                            <label for="cardnumber">Card Number:</label>
+                            <input type="number" id="cardnumber" name="card_number">
+    
+                            <label for="expdate">Expiration Date:</label>
+                            <input type="text" id="expdate" name="exp_date">
+    
+                            <label for="ccv">CCV:</label>
+                            <input type="text" id="ccv" name="card_ccv">
+                        </div>
+                        <!--Form elements for cash-->
+                        <div class="cash-form no-show">
+                           <label for="cashin">Amount Tendered:</label>
+                           <input type="number" id="cashin" name="dollars_paid">
+    
+                           <label for="changedue">Change Due:</label>
+                           <input type="text" id="changedue" name="dollars_due">
+                        </div>
+                        <button type="submit" class="submit" id="submit">Buy Now</button>
                     </form>
-                    <button type="button" id="submit">Submit</button>
+                    <!-- <button type="button" id="submit">Submit</button> -->
                 </div>
             </div>
         </div>
     </div>        
     </section>
+    <!--The Modal-->
+    <div id="popupReceipt" class="modal">
+            
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Testing if receipt page pops up..</p>
+            </div>
+        </div>
 
         <script src="common.js" async defer></script>
         <script src="cart.js" async defer></script>

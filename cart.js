@@ -57,30 +57,89 @@ runningTotal();
 // window.localStorage.clear();
 
 
+//What form code needs: 5.3.2021 8:30 PM
+              //Add event listener to Form. Submit action is what we'll be listening to
+              //In the function, prevent default, go ahead and do what we want to do 
+              //JS to create an element and add it to the page to create an overlay for our receipt
+                
+              const formData = document.getElementById('userData');
+              //const modal = document.getElementById('popupReceipt'); //to select
+              formData.addEventListener('submit',(event)=> { 
+                  event.preventDefault()
+              //    modal.style.display = "none"
+                  let link = document.getElementById('shopLink');
+                  link.classList.toggle('hide')
+              })
+             
+            
 
-// let total = 0;
-// let totalSpan = document.getElementById("total");
-// function updateTotal(value){
-//     total = (total + value);
-//     if (total < 0) {
-//         total = 0;
-//     }
-//     totalSpan.innerHTML = total.toFixed(2);
-// }
-// updateTotal();
-
-
-
-// ${product.price}.value
-
-
-// window.localStorage.clear();
-// window.localStorage.removeItem('name');
-
-
-// var divElement = document.createElement("Div");
-// divElement.id = "cartListing";
-
-
-// // Appending the div element to cart div
-// document.getElementsById("cartResults")[0].appendChild(divElement);
+            let myRadios = document.querySelectorAll("input[type=radio]")
+              let cardFields = document.querySelector(".card-form")
+              let cashFields = document.querySelector(".cash-form")
+            let radios = document.querySelector(".radios")
+              radios.addEventListener("click", (e) => {
+                console.log(e)
+                if(e.target.value === "cash"){
+                    cardFields.classList.add("no-show")
+                    cashFields.classList.remove("no-show")
+                   //cardFields.classList.toggle("no-show")
+                }
+                   if(e.target.value === "credit"){
+                    cashFields.classList.add("no-show")
+                    cardFields.classList.remove("no-show")
+                }
+              })
+              //Second Radio Button idea test //
+            //   const rad = document.myForm.myRadios;
+            //   const prev = null;
+              for (var i = 0; i < myRadios.length; i++) {
+                  myRadios[i].addEventListener('change', function(event) {
+                    //   (prev) ? console.log(prev.value): null;
+                    //   if (this !== prev) {
+                    //       prev = this;
+                    //   }
+                    //   console.log(this.value)
+                  });
+              }
+              
+              
+              //Initial Radio Button idea test //
+              
+              // if (document.getElementById('idOfRadioButton1').checked) {
+              //     creditCard= document.getElementById('idOfRadioButton1').value;
+              //    }
+              // if (document.getElementById('idOfRadioButton1').checked) {
+              //  creditCard= document.getElementById('idOfRadioButton1').value;
+              // }
+              
+              
+              // Get the modal
+              const modal = document.getElementById('popupReceipt');
+              
+              // Get the button that opens the modal
+              const btn = document.getElementById("submit");
+              
+              // Get the <span> element that closes the modal
+              const span = document.getElementsByClassName("close")[0];
+              
+              // When the user clicks the button, open the modal 
+              btn.addEventListener("click", (e) => {
+                console.log("Button was clicked.");
+                modal.style.display = "block";
+              });
+             // btn.onclick = function() {
+               //   console.log("Button was clicked.");
+                //modal.style.display = "block";
+            //  }
+              
+              // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                modal.style.display = "none";
+              }
+              
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
