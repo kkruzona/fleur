@@ -101,7 +101,7 @@ ul {
   
   h3 {
       color: rgb(104, 104, 104);
-      font-weight: lighter;
+      font-weight: 400;
       font-kerning: normal;
   }
   
@@ -121,7 +121,7 @@ ul {
     margin-top: 20px;
     margin-bottom: 80px;
     cursor: pointer;
-    min-width: 400px;
+    /* min-width: 400px; */
   }
   
   button:hover {

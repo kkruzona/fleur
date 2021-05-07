@@ -43,8 +43,18 @@ function runningTotal() {
   }
 runningTotal();  
 
+// let button = document.getElementById('clearAll');
+
+// button.addEventListener('click',(event)=>{
+//     if(event.target.classList.contains('clear')){
+//         window.localStorage.clear();
+
+//     }else 
+// });
+
 
 //   function subTotal() {}
+// window.localStorage.clear();
 
 
 

@@ -79,6 +79,19 @@ input {
   margin-top: -10px;
 }
 
+#clearAll {
+  width: 200px;
+  border: solid 1px #22947c;
+  background-color: white;
+  color: #22947c;
+}
+
+#clearAll:hover {
+  width: 200px;
+  background-color: #22947c;
+  color: white;
+}
+
 
 @media only screen and (min-width: 768px) {
 .screen {
@@ -128,17 +141,12 @@ input {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    background-color: #dcdcdc;
+    background-color: #ededed;
     padding: 60px 40px 20px 40px;
     border-radius: 10px;
     height: 300px;
     margin-left: 50px;
     /* min-width: 220px;
     height: 220px; */
-  }
-
-  
-  .submit {
-    
   }
 }

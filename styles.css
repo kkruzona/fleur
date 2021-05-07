@@ -80,6 +80,11 @@ video#bgvideo {
   justify-content: center;
 }
 
+/* .productListing {
+  display: flex;
+  flex-direction: column;
+} */
+
 #productShop {
   display: flex;
   flex-direction: column;
@@ -89,6 +94,7 @@ video#bgvideo {
 .shopImage {
     max-width: 100%;
     height: auto;
+    margin: auto;
   }
 
   .productOverview {
@@ -111,8 +117,13 @@ video#bgvideo {
   justify-content: center;
 }
 
-.shopImage {
+.productBlock {
   width: 44vw;
+  height: auto;
+}
+
+.shopImage {
+  width: auto;
   height: auto;
 }
 
