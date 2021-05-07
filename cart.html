@@ -63,34 +63,34 @@
                 </div>
                 <div class="container">
                     <form id="userData">
-                        <h2 class="title">Checkout Form</h2>
+                        <h2 class="title">Checkout</h2>
                             <div class="fieldRow">
                                 <div class="firstField">
-                                    <label for="fname">First Name:</label>
-                                    <input type="text" id="name" name="user_First_name">
+                                    <label for="fname">First Name</label>
+                                    <input type="text" id="name" name="user_First_name" placeholder="Jane" onfocus="this.placeholder = ''">
                                 </div>
                                 <div class="secondField">
-                                    <label for="lname">Last Name:</label>
-                                    <input type="text" id="lastname" name="user_last_name">
+                                    <label for="lname">Last Name</label>
+                                    <input type="text" id="lastname" name="user_last_name" placeholder="Smith" onfocus="this.placeholder = ''">
                                 </div>
                             </div>
     
-                           <label for="mail">E-mail:</label>
-                           <input type="email" id="mail" name="user_email">
+                           <label for="mail">E-mail</label>
+                           <input type="email" id="mail" name="user_email" placeholder="jane@gmail.com" onfocus="this.placeholder = ''">
     
-                            <label for="address">Address:</label>
-                            <input type="text" id="address" name="user_address">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="user_address" placeholder="1234 Streetname Rd" onfocus="this.placeholder = ''">
     
-                            <label for="city">City:</label>
-                            <input type="text" id="city" name="user_city">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="user_city" placeholder="Grand Rapids" onfocus="this.placeholder = ''">
                             <div class="fieldRow">
                                 <div class="firstField">
-                                    <label for="state">State:</label>
-                                    <input type="text" id="state" name="user_state">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="user_state" placeholder="MI" onfocus="this.placeholder = ''">
                                 </div>
                                 <div class="secondField">
-                                    <label for="zip">Zip:</label>
-                                    <input type="text" id="zip" name="user_zip">
+                                    <label for="zip">Zip</label>
+                                    <input type="text" id="zip" name="user_zip" placeholder="49534" onfocus="this.placeholder = ''">
                                 </div>
                             </div>
                             
@@ -103,33 +103,49 @@
                             then changes what shows up in the form with the different button
                             selection and form pieces for cash or credit card -->
     
+
+                        <div class="paymentSection">
                         <!--<form name="myForm">-->
                             <div class="radios">
-                            <label for="cardbutton">Credit Card:</label>
-                            <input type="radio" name="myRadios"  value="credit" checked="checked"/>
-                            <label for="cardbutton2">Cash:</label>
-                            <input type="radio" name="myRadios"  value="cash" />
-                        </div>
-                        <!--</form>-->
-    
-                        <!--Form elements for credit card-->
+                                <label for="cardbutton">Credit Card:</label>
+                                <input type="radio" name="myRadios"  value="credit" checked="checked"/>
+                                <label for="cardbutton2">Cash:</label>
+                                <input type="radio" name="myRadios"  value="cash" />
+                            </div>
+                            <!--</form>-->
+
+                            <!--Form elements for credit card-->
                         <div class="card-form no-show">
                             <label for="cardnumber">Card Number:</label>
-                            <input type="number" id="cardnumber" name="card_number">
-    
-                            <label for="expdate">Expiration Date:</label>
-                            <input type="text" id="expdate" name="exp_date">
-    
-                            <label for="ccv">CCV:</label>
-                            <input type="text" id="ccv" name="card_ccv">
+                            <input type="text" id="cardnumber" name="card_number" placeholder="XXXX-XXXX-XXXX-XXXX" onfocus="this.placeholder = ''">
+                            <div class="fieldRow">
+                                <div class="firstField">
+                                    <label for="expdate">Expiration Date:</label>
+                                    <input type="text" id="expdate" name="exp_date" placeholder="MM/YYYY" onfocus="this.placeholder = ''">
+                                </div>
+                                <div class="secondField">
+                                    <label for="ccv">CCV:</label>
+                                    <input type="number" id="ccv" name="card_ccv" placeholder="XXX" onfocus="this.placeholder = ''">
+                                </div>
+                                    
+                            </div>
                         </div>
                         <!--Form elements for cash-->
                         <div class="cash-form no-show">
-                           <label for="cashin">Amount Tendered:</label>
-                           <input type="number" id="cashin" name="dollars_paid">
-    
-                           <label for="changedue">Change Due:</label>
-                           <input type="text" id="changedue" name="dollars_due">
+                                <div class="cashAmount">
+                                        <label for="cashin">Amount Tendered:</label>
+                                        <div class="changeDueRow">
+                                            <input type="number" id="cashin" name="dollars_paid" placeholder="$0.00" onfocus="this.placeholder = ''">
+                                            <button type="button" id="calculateChangedue">Make Change</button>
+                                        </div>
+                                </div>
+                                
+                                <div class="changeDueAmount">
+                                    <h2 class="changeDueTitle">Change Due:</h2>
+                                    <h2 id="changeDue"></h2>
+                                    <!-- <label for="changedue">Change Due:</label> -->
+                                    <!-- <input type="text" id="changedue" name="dollars_due"> -->
+                                </div>
                         </div>
                         <button type="submit" class="submit" id="submit">Buy Now</button>
                     </form>
@@ -143,11 +159,21 @@
     <div id="popupReceipt" class="modal">
             
         <!-- Modal content -->
-        <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Testing if receipt page pops up..</p>
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalResults">
+                <h1 class="thankYou">Thank you <br> for shopping with us!</h1>
+                <div id="cartReceipt">
+
+                </div>
+                <div class="receiptTotals">
+                    <h3 class="subtotal" id="receiptSubtotal">Sub-total:</h3>
+                    <h3 class="taxes" id="receiptTaxes">Taxes:</h3>
+                    <h2 class="grandTotal" id="receiptGrandtotal">Grand-total:</h2>
+                </div>
             </div>
         </div>
+    </div>    
 
         <script src="common.js" async defer></script>
         <script src="cart.js" async defer></script>

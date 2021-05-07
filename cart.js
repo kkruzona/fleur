@@ -16,7 +16,7 @@ let item = `<div id="cartListing">
 <div id="cartOverview">
     <div id="cartDetails">
         <h3 class="category">${product.category}</h3>
-        <h2>${product.name}</h2>
+        <h2 class="productName">${product.name}</h2>
     </div>
         <h2 id="price" name="price">$${product.price}</h2>
 </div>`
@@ -101,6 +101,34 @@ runningTotal();
                     //   console.log(this.value)
                   });
               }
+
+
+              // let changeDue = document.querySelector("#changeDue");
+              let changeBack = document.querySelector("#changeDue");
+              let changeDueButton = document.getElementById("calculateChangedue")
+              let cashTendered = document.getElementById("cashin").value;
+              let total = document.getElementById("grandtotal").value;
+
+
+              changeDueButton.addEventListener("click", (e) => {
+                // let cart = localStorage.getItem('cart') ?
+                // JSON.parse(localStorage.getItem('cart')): 
+                // [];
+                
+                amountDue = total - cashTendered;
+                changeBack.innerText = "$" + amountDue;
+                
+                // if(balance < 0) {
+                //     remainingBalance.classList.remove("green");
+                //     remainingBalance.classList.add("red");
+                // } else {
+                //     remainingBalance.classList.remove("red");
+                //     remainingBalance.classList.add("green");
+                // }
+                return changeBack;
+              })
+
+
               
               
               //Initial Radio Button idea test //
@@ -126,11 +154,96 @@ runningTotal();
               btn.addEventListener("click", (e) => {
                 console.log("Button was clicked.");
                 modal.style.display = "block";
+
+                let products = localStorage.getItem('cart') ?
+                JSON.parse(localStorage.getItem('cart')): 
+                [];
+                console.log(products);
+            
+                for(let product of products){
+                    createReceipt(product);
+                }
+                // runningTotal(); 
+                // cart.total = 0
+                // cart.rows = []
+                // e.preventDefault()
+                // localStorage.clear();
+                // btn.localStorage.clear();
+ 
               });
+
+              // document.getElementById("submit").onclick = clear_me;
+
+              // function clear_me(event) {
+              //   event.preventDefault()
+              //   localStorage.clear();
+              // // checkStorage();
+              // }
+
+              function createReceipt(product) {    
+
+                let item = `<div id="cartListing">
+                <a href=""><img src="${product.image}" class="cartImage"></a>
+                <div id="cartOverview">
+                    <div id="cartDetails">
+                        <h3 class="category">${product.category}</h3>
+                        <h2>${product.name}</h2>
+                    </div>
+                        <h2 id="price" name="price">$${product.price}</h2>
+                </div>`
+                document.getElementById("cartReceipt").innerHTML+=item
+
+                let cart = localStorage.getItem('cart') ?
+                JSON.parse(localStorage.getItem('cart')): 
+                [];
+                let price = document.getElementsByName("price");
+                let total = 0;
+                for (let i = 0; i < cart.length; i++) {
+                total += parseInt(cart[i].price);
+                }
+                // document.getElementById("total").innerHTML = total;
+                let subTotal = document.getElementById('subtotal').value;      
+                let totalTax = document.getElementById('taxes').value;      
+                let grandTotal = document.getElementById('grandtotal').value;
+
+                document.getElementById('receiptSubtotal').innerHTML="Sub-total: $"+subTotal;
+                document.getElementById('receiptTaxes').innerHTML="Taxes: $"+totalTax;
+                document.getElementById('receiptGrandtotal').innerHTML="Grand-total: $"+grandTotal;
+
+                }
+
+
+              //   let item = `<div id="cartListing">
+              // <a href=""><img src="${product.image}" class="cartImage"></a>
+              // <div id="cartOverview">
+              //     <div id="cartDetails">
+              //         <h3 class="category">${product.category}</h3>
+              //         <h2>${product.name}</h2>
+              //     </div>
+              //         <h2 id="price" name="price">$${product.price}</h2>
+              // </div>`
+              // document.getElementById("modalResults").innerHTML+=item
+
              // btn.onclick = function() {
                //   console.log("Button was clicked.");
                 //modal.style.display = "block";
             //  }
+
+            // function createModalDiv(product) {    
+
+            //   let item = `<div id="cartListing">
+            //   <a href=""><img src="${product.image}" class="cartImage"></a>
+            //   <div id="cartOverview">
+            //       <div id="cartDetails">
+            //           <h3 class="category">${product.category}</h3>
+            //           <h2>${product.name}</h2>
+            //       </div>
+            //           <h2 id="price" name="price">$${product.price}</h2>
+            //   </div>`
+            //   document.getElementById("modal-content").innerHTML+=item
+            //   }
+            //   createModalDiv();
+
               
               // When the user clicks on <span> (x), close the modal
               span.onclick = function() {
