@@ -187,7 +187,7 @@ runningTotal();
                 <div id="cartOverview">
                     <div id="cartDetails">
                         <h3 class="category">${product.category}</h3>
-                        <h2>${product.name}</h2>
+                        <h2 class="productName">${product.name}</h2>
                     </div>
                         <h2 id="price" name="price">$${product.price}</h2>
                 </div>`
