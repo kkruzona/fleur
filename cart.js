@@ -106,26 +106,32 @@ runningTotal();
               // let changeDue = document.querySelector("#changeDue");
               let changeBack = document.querySelector("#changeDue");
               let changeDueButton = document.getElementById("calculateChangedue")
-              let cashTendered = document.getElementById("cashin").value;
-              let total = document.getElementById("grandtotal").value;
+
 
 
               changeDueButton.addEventListener("click", (e) => {
                 // let cart = localStorage.getItem('cart') ?
                 // JSON.parse(localStorage.getItem('cart')): 
                 // [];
+                let cashTendered = document.getElementById("cashin").value;
+
+                let cart = localStorage.getItem('cart') ?
+                JSON.parse(localStorage.getItem('cart')): 
+                [];
+                let total = 0;
+                for (let i = 0; i < cart.length; i++) {
+                  total += parseInt(cart[i].price);
+                }
+                total = total * 1.06
+                amountDue = cashTendered - total;
+                changeBack.innerText = "$" + amountDue.toFixed(2);
                 
-                amountDue = total - cashTendered;
-                changeBack.innerText = "$" + amountDue;
+                if(cashTendered.value < amountDue.value) {
+                  amountDue.innerText = "insufficient funds";
+                } else {
+                  return changeBack;
+                }
                 
-                // if(balance < 0) {
-                //     remainingBalance.classList.remove("green");
-                //     remainingBalance.classList.add("red");
-                // } else {
-                //     remainingBalance.classList.remove("red");
-                //     remainingBalance.classList.add("green");
-                // }
-                return changeBack;
               })
 
 
@@ -202,13 +208,13 @@ runningTotal();
                 total += parseInt(cart[i].price);
                 }
                 // document.getElementById("total").innerHTML = total;
-                let subTotal = document.getElementById('subtotal').value;      
-                let totalTax = document.getElementById('taxes').value;      
-                let grandTotal = document.getElementById('grandtotal').value;
+                let subTotal = document.getElementById('subtotal').innerText;      
+                let totalTax = document.getElementById('taxes').innerText;      
+                let grandTotal = document.getElementById('grandtotal').innerText;
 
-                document.getElementById('receiptSubtotal').innerHTML="Sub-total: $"+subTotal;
-                document.getElementById('receiptTaxes').innerHTML="Taxes: $"+totalTax;
-                document.getElementById('receiptGrandtotal').innerHTML="Grand-total: $"+grandTotal;
+                document.getElementById('receiptSubtotal').innerHTML= subTotal;
+                document.getElementById('receiptTaxes').innerHTML= totalTax;
+                document.getElementById('receiptGrandtotal').innerHTML= grandTotal;
 
                 }
 
